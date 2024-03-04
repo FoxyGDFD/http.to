@@ -1,0 +1,32 @@
+section.cut__content {
+    width: 100%;
+    justify-content: sapce-between;
+    aling-items: center;
+    gap: 40px;
+}
+
+section.cut__content > figure {
+    width: 191.42px;
+    height: 411px;
+
+    object-fit: contain;
+}
+
+section.cut__content > article.card, 
+section.cut__content > article.card > ul > li {
+    font-size: 22px;
+}
+
+section.card-list {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    gap: 30px;
+}
+
+
+@media screen and (max-width: 768px) { 
+    section.cut__content {
+        flex-wrap: wrap;
+    }
+}
