@@ -1,0 +1,19 @@
+# Virtual environments and config files
+env/
+venv/
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Docker stuff
+.dockerignore
+Dockerfile
+
+# Python wheels
+redist/
+
+# Django
+media/

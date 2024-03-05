@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  web:
+    restart: always
+    image: app
+    build: ./web
+    container_name: web
+    volumes:
+      - ./web:/app
+    ports:
+      - 8000:8000
+    environment:
+      - DJANGO_SUPERUSER_PASSWORD=admin
+      - DJANGO_SUPERUSER_USERNAME=admin
