@@ -3,18 +3,19 @@
 
 {% block content %}
     <section class="flex cut__content">
-        {% include "../components/card.html" with text="Качество огранки.<br>Осматривается драгоценный камень через 10х лупу. При этом оцениваются пропорции и полировка камня. При оценке пропорций учитывается красота и привлекательность камня. Состояние поверхности характеризуется наличием дефектов, обусловленных качеством обработки. Цветные драгоценные камни могут иметь как фасетную огранку, так и огранку в виде кабошона. Качество огранки и пропорции камня важны по следующим причинам:<ul><li>влияют на глубину цвета камня;</li><li>влияют на игру и живость камня</li></ul>" %}
-        <figure><img src="{% static 'pages/img/cut.png' %}" alt=""></figure>
+        {% with main_card|safe as content %}
+            {% include "../components/card.html" with card_content=content %}
+        {% endwith %}
+        <figure><img src="{% static '/pages/img/cut.png' %}" alt=""></figure>
     </section>
     <section>
         <div></div>
         <div></div>
     </section>
     <section class="flex flex-col card-list">
-        {% include "../components/card.html" with text="Excellent cut: optimal angles of the crown and pavilion facets, correct orientation of anisotropic material, optimal proportions of linear dimensions, good facet junctions, excellent polish, uniformity of the girdle within the norms." %}
-        {% include "../components/card.html" with text="Good cut: proper symmetry, reasonably correct proportions of linear and angular parameters, slight surface distortions, uniformity of the girdle within norms, surface with minor scratches and tool marks despite fairly good polish. Microscopic feathers may be concentrated on the girdle, barely discernible to the naked eye but easily seen under tenfold magnification." %}
-        {% include "../components/card.html" with text="Fair cut: noticeable cut flaws, easily visible to the naked eye, deviation from proper geometric forms, lack of parallelism between table and girdle facets, minor deviations in angular parameters, surface distortion, irregularity of the girdle within norms, scratches, girdle chips up to 0.2 mm in size, poor polish." %}
-        {% include "../components/card.html" with text="Poor cut - significant cut flaws, visible to the naked eye, asymmetrical facet arrangements, severe proportion deviations, significant surface distortion, lack of parallelism between table and girdle, major chips and scratches. Poor polish." %}
+        {% for card in cards %}
+        {% include "../components/card.html" with card_content=card %}
+        {% endfor %}
     </section>
     <link rel="stylesheet" type="text/css" href="{% static '/pages/css/cut.css' %}" />
 {% endblock %}

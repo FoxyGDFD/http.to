@@ -2,7 +2,9 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', CaratView.as_view(), name='carat'),
+    
+    path('carat/', CaratView.as_view(), name='carat'),
     path('free-vygem/', FreeVygemView.as_view(), name='free-vygem'),
-    path('cut/', CutView.as_view(), name='cut')
+    path('cut/', CutView.as_view(), name='cut'),
+    path('transparency/', TransparencyView.as_view(), name='transparency'),
 ]
