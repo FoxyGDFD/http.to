@@ -2,15 +2,37 @@
 {% load static %}
 
 {% block content %}
-    <section class="flex cut__content">
+    <section class="flex cut__content ites-center">
         {% with main_card|safe as content %}
             {% include "../components/card.html" with card_content=content %}
         {% endwith %}
         <figure><img src="{% static '/pages/img/cut.png' %}" alt=""></figure>
     </section>
-    <section>
-        <div></div>
-        <div></div>
+    <section class="flex imgs-block">
+        <figure class="first-diamond flex flex-col">
+            <img src="{% static '/pages/img/cut-diamond-1.png' %}" alt="">
+            <figcaption class="flex flex-col">
+                <b>Идеальная огранка</b>
+                <p>При такой огранке, свет попадающий  в камень, отражаясь от павильона выходит через корону. В результате мы получаем светящийся  “живой” камень</p>
+            </figcaption>
+        </figure>
+        <div class="flex flex-col diamond-container">
+            <div class="flex flex-col">
+                <b>Примеры</b>
+                <p>движения света внутри идеально ограненного камня, камня с недостаточной и завышенной высотой</p>
+            </div>
+            <div class="flex justify-around align-items">
+                <figure class="small-diamond">
+                    <img src="{% static '/pages/img/cut-diamond-small-1.png' %}" alt="">
+                </figure>
+                <figure class="small-diamond">
+                    <img src="{% static '/pages/img/cut-diamond-small-2.png' %}" alt="">
+                </figure>
+                <figure class="small-diamond">
+                    <img src="{% static '/pages/img/cut-diamond-small-3.png' %}" alt="">
+                </figure>
+            </div>
+        </div>
     </section>
     <section class="flex flex-col card-list">
         {% for card in cards %}

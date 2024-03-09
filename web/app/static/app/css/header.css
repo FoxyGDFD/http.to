@@ -23,7 +23,6 @@ header > figure.logo {
 
 header > figure.logo img {
     width: 100%;
-    object-fit: contain;
 }
 
 header > figure > p {

@@ -22,10 +22,17 @@ p, li {
     font-weight: 500;
 }
 
-figure > img {
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* figure > img {
     wigth: 100%;
     height: 100%;
-}
+    object-fit: contain;
+} */
 
 .page-container {
     max-width: 1440px;
@@ -44,6 +51,14 @@ figure > img {
 
 .flex {
     display: flex;
+}
+
+.justify-around {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
 }
 
 h2.page-title {
