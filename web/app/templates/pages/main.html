@@ -1,0 +1,65 @@
+{% extends '../app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section>
+        <article class="flex justify-between main-f-block">
+            <div class="flex flex-col img">
+                <figure>
+                    <img src="{% static '/pages/img/cut.png' %}" alt="">
+                </figure>
+                <div class="flex justify-between">
+                    <figure>
+                        <img src="{% static '/pages/img/app-store.png' %}" alt="">
+                    </figure>
+                    <figure>
+                        <img src="{% static '/pages/img/google-play.png' %}" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="main-text">
+                <h1 class="red">... a few answers to questions and you<br>know the Value of Your GEMstone ...</h1>
+                <p>
+                    <b>Itroducing VYGEM,</b>
+                    <br><br>
+                    an innovative application designed the value of precious gemstones ( Given the absence
+                    of a standardized pricing system for gemstones, it is important to note that our program
+                    calculates prices based on prevailing market value ranges).<br>Developed through a collaborative effort between a team of expert gemologists,
+                    cutting-edge artificial intelligence technology, and real-time monitoring of the gemstone
+                    market. Featuring a user-friendly interface, <b>VYGEM</b> caters to both seasoned professionals
+                    and newcomers in the realm of gemstone valuation.
+                </p>
+            </div>
+        </article>
+
+        <article class="grid splines-block">
+            <h2 id="first-point" class="red">Calculation process</h2>
+            <div class="second-point">
+                <h3 id="second-point" class="red">determine the type of gem</h2>
+                <ul>
+                    <li>how to do this</li>
+                </ul>
+            </div>
+            <div class="third-point">
+                <h3 id="third-point" class="red">4 C +</h2>
+                <ul>
+                    <li><a href="{% url 'carat' %}">carat</a></li>
+                    <li><a href="{% url 'color' %}">color</a></li>
+                    <li><a href="{% url 'transparency' %}">transparency</a></li>
+                    <li><a href="{% url 'cut' %}">cut</a></li>
+                </ul>
+            </div>
+            <div class="fourth-point">
+                <h3 id="fourth-point" class="red">get the result</h2>
+                <ul>
+                    <li>why is the value not the price</li>
+                    <li>result</li>
+                    <li>sale-purchase plan</li>
+                </ul>
+            </div>
+            <figure><img src="{% static '/pages/img/main.png' %}" alt=""></figure>
+        </article>
+
+        <link rel="stylesheet" type="text/css" href="{% static '/pages/css/main.css' %}" />
+    </section>
+{% endblock %}

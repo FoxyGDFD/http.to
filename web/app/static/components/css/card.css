@@ -9,7 +9,3 @@ article.card {
     font-size: 20px;
     white-space: pre-wrap;
 }
-
-article.card > ul, ol {
-    padding-inline-start: 25px;
-}
