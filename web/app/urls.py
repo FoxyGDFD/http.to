@@ -8,4 +8,6 @@ urlpatterns = [
     path('transparency/', TransparencyView.as_view(), name='transparency'),
     path('cut/', CutView.as_view(), name='cut'),
     path('free-vygem/', FreeVygemView.as_view(), name='free-vygem'),
+    path('clarity/', ClarityView.as_view(), name='clarity'),
+    path('gems-name/', GemsNameView.as_view(), name='gems-name'),
 ]
