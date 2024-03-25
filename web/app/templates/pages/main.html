@@ -32,34 +32,104 @@
             </div>
         </article>
 
-        <article class="grid splines-block">
-            <h2 id="first-point" class="red">Calculation process</h2>
-            <div class="second-point">
-                <h3 id="second-point" class="red">determine the type of gem</h2>
-                <ul>
-                    <li>how to do this</li>
-                </ul>
-            </div>
-            <div class="third-point">
-                <h3 id="third-point" class="red">4 C +</h2>
-                <ul>
-                    <li><a href="{% url 'carat' %}">carat</a></li>
-                    <li><a href="{% url 'color' %}">color</a></li>
-                    <li><a href="{% url 'transparency' %}">transparency</a></li>
-                    <li><a href="{% url 'cut' %}">cut</a></li>
-                </ul>
-            </div>
-            <div class="fourth-point">
-                <h3 id="fourth-point" class="red">get the result</h2>
-                <ul>
-                    <li>why is the value not the price</li>
-                    <li>result</li>
-                    <li>sale-purchase plan</li>
-                </ul>
-            </div>
-            <figure><img src="{% static '/pages/img/main.png' %}" alt=""></figure>
-        </article>
+            <article class="grid splines-block relative">
+                <h2 id="first-point" class="red">Calculation process</h2>
+                <div class="second-point">
+                    <h3 id="second-point" class="red">determine the type of gem</h2>
+                    <ul>
+                        <li>how to do this</li>
+                    </ul>
+                </div>
+                <div class="third-point">
+                    <h3 id="third-point" class="red">4 C +</h2>
+                    <ul>
+                        <li><a href="{% url 'carat' %}">carat</a></li>
+                        <li><a href="{% url 'color' %}">color</a></li>
+                        <li><a href="{% url 'transparency' %}">transparency</a></li>
+                        <li><a href="{% url 'cut' %}">cut</a></li>
+                    </ul>
+                </div>
+                <div class="fourth-point">
+                    <h3 id="fourth-point" class="red">get the result</h2>
+                    <ul>
+                        <li>why is the value not the price</li>
+                        <li>result</li>
+                        <li>sale-purchase plan</li>
+                    </ul>
+                </div>
+
+                <div class="fifth-point">
+                    <h3 id="fifth-point" class="red">check the result</h2>
+                    <ul>
+                        <li>how to do this</li>
+                    </ul>
+                </div>
+
+                <figure><img src="{% static '/pages/img/main.png' %}" alt=""></figure>
+
+                <img class="absolute spline" style="left: 400px; top: 23px;" src="{% static '/pages/img/main-spline-1.svg' %}" alt="">
+                <img class="absolute spline" style="left: -5px; top: 70px;" src="{% static '/pages/img/main-spline-2.svg' %}" alt="">
+                <img class="absolute spline" style="left: 160px; top: 145px;" src="{% static '/pages/img/main-spline-3.svg' %}" alt="">
+                <img class="absolute spline" style="left: -10px; top: 312px;" src="{% static '/pages/img/main-spline-4.svg' %}" alt="">
+                <img class="absolute spline" style="left: 470px; top: 452px;" src="{% static '/pages/img/main-spline-5.svg' %}" alt="">
+
+            </article>
 
         <link rel="stylesheet" type="text/css" href="{% static '/pages/css/main.css' %}" />
     </section>
 {% endblock %}
+
+
+
+
+
+        <!-- <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+            <path id="first-spline" d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" class="red" fill="transparent"/>
+            <path id="second-spline" d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="red" fill="transparent"/>
+            <path id="third-spline" d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" class="red" fill="transparent"/>
+        </svg>
+        
+        <script>
+            const drawConnector = (start, end, path) => {
+              const posStart = {
+                x: start.offsetLeft + start.offsetWidth,
+                y: start.offsetTop  + start.offsetHeight / 2
+              };
+              const posEnd = {
+                x: end.offsetLeft,
+                y: end.offsetTop  + start.offsetHeight / 2
+              };
+              const dStr =
+                  "M" +
+                  (posStart.x) + "," + (posStart.y) + " " +
+                  "C" +
+                  (posStart.x + 200) + "," + (posStart.y) + " " +
+                  (posEnd.x - 200) + "," + (posEnd.y) + " " +
+                  (posEnd.x) + "," + (posEnd.y);
+                path.setAttribute("d", dStr);
+            };
+        
+            const spliles = () => {
+                const fPoint = document.querySelector("#first-point");
+                const sPoint = document.querySelector("#second-point");
+                const tPoint = document.querySelector("#third-point");
+                const fourthPoint = document.querySelector("#fourth-point");
+
+                const fSpline = document.querySelector("#first-spline");
+                const sSpline = document.querySelector("#second-spline");
+                const tSpline = document.querySelector("#third-spline");
+                
+                window.addEventListener("load", () => {
+                    drawConnector(fPoint, sPoint, fSpline);
+                    drawConnector(sPoint, tPoint, sSpline);
+                    drawConnector(tPoint, fourthPoint, tSpline);
+                });
+                window.addEventListener("resize", () => {
+                    drawConnector(fPoint, sPoint, fSpline);
+                    drawConnector(sPoint, tPoint, sSpline);
+                    drawConnector(tPoint, fourthPoint, tSpline);
+                });
+            }
+            
+            spliles();
+        </script>    -->

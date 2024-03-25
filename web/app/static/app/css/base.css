@@ -70,3 +70,11 @@ h2.page-title {
 
     text-align: center;
 }
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}

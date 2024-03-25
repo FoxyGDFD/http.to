@@ -71,7 +71,7 @@ section {
 
 article.splines-block {
     grid-template-columns: 1fr 1fr 300px;
-    gap: 30px;
+    gap: 5px;
 }
 
 article.splines-block > figure {
@@ -92,9 +92,25 @@ article.splines-block > .second-point {
 article.splines-block > .third-point {
     grid-column: 1/1;
     grid-row: 5/6;
+    margin-left: 50px;
 }
 
 article.splines-block > .fourth-point {
     grid-column: 2/2;
     grid-row: 7/8;
+}
+
+article.splines-block > .fifth-point {
+    grid-column: 1/1;
+    grid-row: 10/11;
+
+    padding-left: 200px;
+}
+
+figure.spline {
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
 }
