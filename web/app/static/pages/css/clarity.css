@@ -1,0 +1,21 @@
+article.types {
+    gap: 10px;
+}
+
+article.types > div {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+h2, article.types > div > h3.type-title {
+    font-weight: 200;
+    font-size: 36px;
+}
+
+article.types > div > h3.type-title {
+    margin: 50px 0;
+}
+
+article.card.no-radius {
+    border-radius: 0;
+}

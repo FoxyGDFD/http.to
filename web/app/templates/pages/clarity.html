@@ -4,6 +4,22 @@
 {% block content %}
     {% with card|safe as content %}
         {% include "../components/card.html" with card_content=content %}
-    <!-- {% endwith %}
-    <link rel="stylesheet" type="text/css" href="{% static '/pages/css/carat.css' %}" /> -->
+    {% endwith %}
+    
+    <h2 class="text-center">Type clarity of gems</h2>
+    <article class="flex flex-wrap justify-between types">
+        <div class="flex justify-center flex-col w-full">
+            <h3 class="type-title text-center">Type 1</h1>
+            {% include "../components/card.html" with card_content="Amethyst<br>Ametrine<br>Aquamarine<br>Гелиодоры<br>Данбуриты<br>Morganite<br>Beryl (Green)<br>Chrysoberyl (Yellow, green)<br>Кварц дымчатый<br>Kunzite<br>Морганиты<br>Danburite<br>Лабродарит<br>Smoky Quartz<br>Imperial Topaz<br>Blue Topaz<br>Blue Zircon<br>White Zircon<br>Tanzanite<br>Сподумены<br>Топазы голубые<br>Турмалины зеленые<br>Цирконы голубые" class_name='no-radius text-center' %}
+        </div>
+        <div class="flex justify-center flex-col w-full">
+            <h3 class="type-title text-center">Type 2</h1>
+            {% include "../components/card.html" with card_content="Amblygonite<br>Apatite<br>Alexandrite<br>Ruby<br>Sapphire<br>Diopside<br>Fluorite<br>Garnet spesartine<br>Iolite<br>Peridot<br>Most Quartz varieties<br>Spinel<br>Tourmaline<br>Zircon (including red, yellow and orange colors)." class_name='no-radius text-center' %}
+        </div>
+        <div class="flex justify-center flex-col w-full">
+            <h3 class="type-title text-center">Type 3</h1>
+            {% include "../components/card.html" with card_content="Benitoite<br>Red Beryl<br>Emerald<br>Kyanite<br>Prehnite<br>Sphalerite<br>Sphene<br>Watermelon and Rubellite Tourmaline." class_name="text-center" %}
+        </div>
+    </article>
+    <link rel="stylesheet" type="text/css" href="{% static '/pages/css/clarity.css' %}" />
 {% endblock %}
